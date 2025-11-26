@@ -1,0 +1,40 @@
+<div class="todo-item" [class.completed]="todo.completed">
+  <div class="todo-content">
+    <input 
+      type="checkbox" 
+      [checked]="todo.completed" 
+      (change)="onToggle()"
+      class="todo-checkbox"
+    >
+    
+    <div class="todo-text" *ngIf="!isEditing">
+      <span (dblclick)="startEditing()">{{ todo.title }}</span>
+      <div class="todo-actions">
+        <button (click)="startEditing()" class="btn-edit">Edit</button>
+        <button (click)="onDelete()" class="btn-delete">Delete</button>
+      </div>
+    </div>
+
+    <div class="todo-edit" *ngIf="isEditing">
+      <input 
+        type="text" 
+        [(ngModel)]="editTitle"
+        (keyup.enter)="saveEdit()"
+        (keyup.escape)="cancelEdit()"
+        class="edit-input"
+        autofocus
+      >
+      <div class="edit-actions">
+        <button (click)="saveEdit()" class="btn-save">Save</button>
+        <button (click)="cancelEdit()" class="btn-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation Dialog -->
+<app-confirmation-dialog
+  [message]="'Are you sure you want to delete this todo?'"
+  [todoTitle]="todo.title"
+  (confirm)="onDeleteConfirmed($event)"
+></app-confirmation-dialog>

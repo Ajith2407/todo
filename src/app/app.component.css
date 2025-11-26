@@ -1,0 +1,63 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.app-main {
+  margin-top: 20px;
+}
+
+.todo-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.clear-completed {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.clear-completed:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .todo-container {
+    padding: 16px;
+  }
+  
+  .todo-stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

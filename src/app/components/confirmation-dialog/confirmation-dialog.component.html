@@ -1,0 +1,20 @@
+<div class="dialog-overlay" *ngIf="show" (click)="onCancel()">
+  <div class="dialog-container" (click)="$event.stopPropagation()">
+    <div class="dialog-header">
+      <h3>Confirm Delete</h3>
+    </div>
+    
+    <div class="dialog-body">
+      <p>{{ message }}</p>
+      <div class="todo-preview" *ngIf="todoTitle">
+        <strong>"{{ todoTitle }}"</strong>
+      </div>
+      <p class="warning-text">This action cannot be undone.</p>
+    </div>
+    
+    <div class="dialog-actions">
+      <button class="btn-cancel" (click)="onCancel()">CANCEL</button>
+      <button class="btn-confirm" (click)="onConfirm()">OK</button>
+    </div>
+  </div>
+</div>
