@@ -12,7 +12,7 @@ export interface Toast {
 })
 export class ToastService {
   private toasts: Toast[] = [];
-  private defaultDuration = 8000; // 3 seconds
+  private defaultDuration = 3000; // 3 seconds
 
   getToasts(): Toast[] {
     return this.toasts;

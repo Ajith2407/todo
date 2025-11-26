@@ -58,17 +58,6 @@
 .btn-delete {
   background-color: #dc3545;
   color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.2s;
-}
-
-.btn-delete:hover {
-  background-color: #c82333;
-  transform: scale(1.05);
 }
 
 .btn-save {

@@ -10,9 +10,30 @@ body {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
   margin: 0;
+  line-height: 1.4;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Smooth transitions */
 * {
   transition: all 0.3s ease;
+}
+
+/* Better touch targets for mobile */
+button, input[type="checkbox"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve text readability on mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.3;
+  }
 }
