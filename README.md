@@ -36,3 +36,5 @@ git add .
   ng build --output-path docs --base-href https://ajith2407.github.io/todo/
 
 npx angular-cli-ghpages --dir=docs
+
+ng build
